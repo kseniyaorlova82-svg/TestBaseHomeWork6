@@ -15,7 +15,7 @@ public class CreateAccountTests extends TestBase {
 
         type(By.id("FirstName"), "Oksana");
 
-        type(By.id("LastName"), "Orlova");
+        type(By.id("LastName"), "Hanzii");
 
         String email =
                 "oksana" + System.currentTimeMillis() + "@gmail.com";
