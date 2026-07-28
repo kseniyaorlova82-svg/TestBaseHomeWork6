@@ -15,12 +15,9 @@ public class CreateAccountTests extends TestBase {
 
         type(By.id("FirstName"), "Oksana");
 
-        type(By.id("LastName"), "Orlova");
+        type(By.id("LastName"), "Hanzii");
 
-        String email =
-                "oksana" + System.currentTimeMillis() + "@gmail.com";
-
-        type(By.id("Email"), email);
+        type(By.id("Email"), "oksana.hanzii.82@gmail.com");
 
         type(By.id("Password"), "Aa123456!");
 
@@ -30,6 +27,30 @@ public class CreateAccountTests extends TestBase {
 
         Assert.assertTrue(
                 isElementPresent(By.cssSelector(".result"))
+        );
+    }
+
+    @Test
+    public void existedUserRegisterNegativeTest() {
+
+        click(By.cssSelector(".ico-register"));
+
+        click(By.id("gender-female"));
+
+        type(By.id("FirstName"), "Oksana");
+
+        type(By.id("LastName"), "Hanzii");
+
+        type(By.id("Email"), "oksana.hanzii.82@gmail.com");
+
+        type(By.id("Password"), "Aa123456!");
+
+        type(By.id("ConfirmPassword"), "Aa123456!");
+
+        click(By.id("register-button"));
+
+        Assert.assertTrue(
+                isElementPresent(By.cssSelector(".validation-summary-errors"))
         );
     }
 }
