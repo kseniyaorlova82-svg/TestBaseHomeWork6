@@ -20,7 +20,6 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-
     @AfterMethod
     public void tearDown() {
         if(driver != null) {
@@ -46,6 +45,9 @@ public class TestBase {
         type(By.id("Email"), email);
         type(By.id("Password"), password);
         type(By.id("ConfirmPassword"), confirmPassword);
+    }
+    public void clickOnAgreeButton() {
+        click(By.cssSelector("[href='/register']"));
     }
     public String newEmail(){
         int i = (int) ((System.currentTimeMillis()/1000)%3600);
