@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Quick Suite">
+
+    <test name="Quick Tests">
+
+        <classes>
+            <class name="de.demowebshop.tests.CreateAccountTest"/>
+        </classes>
+
+    </test>
+
+</suite>
