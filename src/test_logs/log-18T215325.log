@@ -1,0 +1,6 @@
+400  [Test worker] INFO  de.demowebshop.tests.TestBase -- Start test: newUserRegisterPositiveTest
+672  [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 151.0.7922.138 (resolved driver for Chrome 151)
+699  [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\kseni\.cache\selenium\chromedriver\win64\151.0.7922.138\chromedriver.exe
+14963 [Test worker] ERROR de.demowebshop.tests.TestBase -- FAILED: newUserRegisterPositiveTest. Screenshot -> screenshots/screen-1787082820246.png
+15993 [Test worker] INFO  de.demowebshop.tests.TestBase -- Stop test
+15993 [Test worker] INFO  de.demowebshop.tests.TestBase -- *****************************************
