@@ -1,0 +1,6 @@
+411  [Test worker] INFO  de.demowebshop.tests.TestBase -- Start test: newUserRegisterPositiveTest
+700  [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 151.0.7922.138 (resolved driver for Chrome 151)
+730  [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\kseni\.cache\selenium\chromedriver\win64\151.0.7922.138\chromedriver.exe
+5997 [Test worker] INFO  de.demowebshop.tests.TestBase -- PASSED: newUserRegisterPositiveTest
+6983 [Test worker] INFO  de.demowebshop.tests.TestBase -- Stop test
+6983 [Test worker] INFO  de.demowebshop.tests.TestBase -- *****************************************
