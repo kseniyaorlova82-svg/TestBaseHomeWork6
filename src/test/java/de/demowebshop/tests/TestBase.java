@@ -123,4 +123,16 @@ public class TestBase {
         int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
         return "john" + i + "@dow.test";
     }
+    public void clickOnLoginLink() {
+        click(By.cssSelector("[href='/login']"));
+    }
+
+    public void fillLoginForm(String email, String password) {
+        type(By.id("Email"), email);
+        type(By.id("Password"), password);
+    }
+
+    public void clickOnLoginButton() {
+        click(By.cssSelector(".login-button"));
+    }
 }
