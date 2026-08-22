@@ -15,7 +15,8 @@ public class ItemTests extends TestBase {
     }
 
     @Test
-    public void addItemToCartTest() {
+    public void addItemToCartTest() throws InterruptedException {
+
         driver.findElements(By.cssSelector(".product-box-add-to-cart-button"))
                 .get(1)
                 .click();
@@ -26,5 +27,7 @@ public class ItemTests extends TestBase {
                 driver.findElement(By.cssSelector(".product-name")).getText(),
                 "14.1-inch Laptop"
         );
+
+        Thread.sleep(5000);
     }
 }
