@@ -5,7 +5,7 @@
     <test name="Quick Tests">
 
         <classes>
-            <class name="de.demowebshop.tests.CreateAccountTest"/>
+            <class name="tests.CreateAccountTest"/>
         </classes>
 
     </test>

@@ -6,7 +6,7 @@
 
         <classes>
 
-            <class name="de.demowebshop.tests.CreateAccountTest">
+            <class name="tests.CreateAccountTest">
                 <methods>
                     <include name=".*Positive.*"/>
                 </methods>
