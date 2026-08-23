@@ -12,11 +12,11 @@ public class CreateAccountTest extends TestBase {
         app.getUser().clickOnRegisterLink();
 
         app.getUser().fillRegistrationForm(
-                "John",
-                "Dow",
+                "Oksana",
+                "Hanzii",
                 app.getUser().newEmail(),
-                "johndowtest1",
-                "johndowtest1",
+                "T18287daha!",
+                "T18287daha!",
                 "gender-male"
         );
 

@@ -51,6 +51,6 @@ public class UserHelper extends BaseHelper {
 
     public String newEmail() {
         int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
-        return "john" + i + "@dow.test";
+        return "oksana" + i + "@test.com";
     }
 }
