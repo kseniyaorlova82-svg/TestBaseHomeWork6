@@ -3,21 +3,32 @@ package tests;
 import core.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.MyDataProviders;
 
 public class CreateAccountTest extends TestBase {
 
-    @Test
-    public void newUserRegisterPositiveTest() {
+    @Test(
+            dataProvider = "userDataFromCsv",
+            dataProviderClass = MyDataProviders.class
+    )
+    public void newUserRegisterPositiveTest(
+            String firstName,
+            String lastName,
+            String email,
+            String password,
+            String confirmPassword,
+            String gender
+    ) {
 
         app.getUser().clickOnRegisterLink();
 
         app.getUser().fillRegistrationForm(
-                "Oksana",
-                "Hanzii",
-                app.getUser().newEmail(),
-                "T18287daha!",
-                "T18287daha!",
-                "gender-male"
+                firstName,
+                lastName,
+                email,
+                password,
+                confirmPassword,
+                gender
         );
 
         app.getUser().clickOnRegisterButton();
