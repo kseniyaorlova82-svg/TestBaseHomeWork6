@@ -9,6 +9,7 @@ public class JavaScriptAlertsTests extends TestBase {
     @Test
     public void jsAlertTest() {
         new HomePage(driver)
+
                 .getJavaScriptAlerts()
                 .clickJsAlert()
                 .verifyResult("You successfully clicked an alert");

@@ -7,9 +7,11 @@ import org.testng.annotations.Test;
 public class NestedFramesTests extends TestBase {
 
     @Test
+
     public void nestedFramesTest() {
-        new HomePage(driver)
-                .getNestedFrames()
-                .verifyNestedFrames();
+    new HomePage(driver)
+           .getNestedFrames()
+           .verifyNestedFrames();
+
     }
 }

@@ -16,17 +16,20 @@ public class WindowsPage extends BasePage {
     }
 
     @FindBy(xpath = "//a[text()='Click Here']")
+
     WebElement clickHere;
 
     public WindowsPage clickOnNewTabButton() {
         click(clickHere);
         return this;
+
     }
 
     public WindowsPage switchToNewTab(int index) {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(index));
         return this;
+
     }
 
     @FindBy(tagName = "h3")
@@ -35,5 +38,6 @@ public class WindowsPage extends BasePage {
     public WindowsPage verifyToTabTitle(String title) {
         Assert.assertTrue(isContainsText(title, newWindowTitle));
         return this;
+
     }
 }

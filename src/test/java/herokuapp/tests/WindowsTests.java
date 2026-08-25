@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 public class WindowsTests extends TestBase {
 
     @Test
+
     public void newWindowTest() {
         new HomePage(driver)
                 .getMultipleWindows()
