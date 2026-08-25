@@ -24,7 +24,6 @@ public class JavaScriptAlertsPage extends BasePage {
     @FindBy(id = "result")
     WebElement result;
 
-
     public JavaScriptAlertsPage clickJsAlert() {
         click(jsAlertButton);
         driver.switchTo().alert().accept();
@@ -49,6 +48,7 @@ public class JavaScriptAlertsPage extends BasePage {
         driver.switchTo().alert().accept();
         return this;
     }
+
     public JavaScriptAlertsPage verifyResult(String text) {
         Assert.assertTrue(isContainsText(text, result));
         return this;
