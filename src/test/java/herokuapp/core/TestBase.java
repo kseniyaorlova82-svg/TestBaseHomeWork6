@@ -15,7 +15,7 @@ public class TestBase {
     public void init() {
         driver = new ChromeDriver();
 
-        driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        driver.get("https://the-internet.herokuapp.com");
 
         driver.manage().window().maximize();
 
