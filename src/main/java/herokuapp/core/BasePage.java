@@ -1,5 +1,5 @@
 package herokuapp.core;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
@@ -16,12 +16,14 @@ public abstract class BasePage {
     protected WebDriver driver;
     public static SoftAssertions softly;
     public static Actions actions;
+    public static JavascriptExecutor js;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         softly = new SoftAssertions();
         actions = new Actions(driver);
+        js = (JavascriptExecutor) driver;
     }
 
     public void click(WebElement element) {
