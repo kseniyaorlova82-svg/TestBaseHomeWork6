@@ -25,11 +25,11 @@ public class BrokenImagesPage extends BasePage {
             WebElement image = images.get(i);
             String imageUrl = image.getAttribute("src");
 
-    try {
+            try {
     boolean imageDisplayed = (Boolean) js.executeScript(
-            "return (typeof arguments[0].naturalWidth!=undefined && arguments[0].naturalWidth>0);",
-                        image
-            );
+    "return (typeof arguments[0].naturalWidth!=undefined && arguments[0].naturalWidth>0);",
+    image
+    );
 
     if (imageDisplayed) {
     softly.assertThat(imageDisplayed);
@@ -43,6 +43,6 @@ public class BrokenImagesPage extends BasePage {
         }
 
     softly.assertAll();
-        return this;
+    return this;
     }
 }
