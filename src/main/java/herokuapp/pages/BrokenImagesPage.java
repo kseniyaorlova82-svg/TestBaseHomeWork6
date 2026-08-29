@@ -20,29 +20,29 @@ public class BrokenImagesPage extends BasePage {
 
         System.out.println("Total images on the page = " + images.size());
 
-    for (int i = 0; i < images.size(); i++) {
+        for (int i = 0; i < images.size(); i++) {
 
             WebElement image = images.get(i);
             String imageUrl = image.getAttribute("src");
 
             try {
-    boolean imageDisplayed = (Boolean) js.executeScript(
-    "return (typeof arguments[0].naturalWidth!=undefined && arguments[0].naturalWidth>0);",
-    image
-    );
+                boolean imageDisplayed = (Boolean) js.executeScript(
+                        "return (typeof arguments[0].naturalWidth!=undefined && arguments[0].naturalWidth>0);",
+                        image
+                );
 
-    if (imageDisplayed) {
-    softly.assertThat(imageDisplayed);
-    } else {
-    softly.fail("Broken image -> " + imageUrl);
-    }
+                if (imageDisplayed) {
+                    softly.assertThat(imageDisplayed);
+                } else {
+                    softly.fail("Broken image -> " + imageUrl);
+                }
 
-    } catch (Exception e) {
-    softly.fail("Error occurred");
+            } catch (Exception e) {
+                softly.fail("Error occurred");
             }
         }
 
-    softly.assertAll();
-    return this;
+        softly.assertAll();
+        return this;
     }
 }
