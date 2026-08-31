@@ -1,30 +1,37 @@
 package herokuapp.core;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.Alert;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
+
 
 import java.time.Duration;
 
+
 public abstract class BasePage {
 
-    protected WebDriver driver;
-    public static SoftAssertions softly;
-    public static Actions actions;
-    public static JavascriptExecutor js;
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+protected WebDriver driver;
+public static SoftAssertions softly;
+public static Actions actions;
+public static JavascriptExecutor js;
+public static WebDriverWait wait;
+
+public BasePage(WebDriver driver) {
+     this.driver = driver;
+     PageFactory.initElements(driver,this);
+
         softly = new SoftAssertions();
         actions = new Actions(driver);
         js = (JavascriptExecutor) driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public void click(WebElement element) {

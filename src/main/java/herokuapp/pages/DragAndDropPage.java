@@ -3,9 +3,7 @@ package herokuapp.pages;
 import herokuapp.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 public class DragAndDropPage extends BasePage {
 
@@ -20,14 +18,21 @@ public class DragAndDropPage extends BasePage {
     WebElement columnB;
 
     public DragAndDropPage dragAtoB() {
-        new Actions(driver)
+        actions
                 .dragAndDrop(columnA, columnB)
                 .perform();
+
+        wait.until(driver -> columnA.getText().contains("B"));
+        wait.until(driver -> columnB.getText().contains("A"));
+
         return this;
     }
 
-    public DragAndDropPage verifyDragAndDrop() {
-        Assert.assertTrue(columnA.getText().contains("B"));
-        return this;
+    public String getColumnAText() {
+        return columnA.getText();
+    }
+
+    public String getColumnBText() {
+        return columnB.getText();
     }
 }
